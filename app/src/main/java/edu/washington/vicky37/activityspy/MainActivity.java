@@ -5,50 +5,42 @@ import android.os.Bundle;
 import android.util.Log;
 
 public class MainActivity extends AppCompatActivity {
-    private final String onCreateMessage = "on onCreate event fired";
-    private final String onStartMessage = "on onStart event fired";
-    private final String onRestartMessage = "on onRestart event fired";
-    private final String onResumeMessage = "on onResume event fired";
-    private final String onPauseMessage = "on onPause event fired";
-    private final String onStopMessage = "on onStop event fired";
-    private final String onDestroyMessage = "We’re going down, Captain!”";
+    public static final String TAG = "Main Activity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Log.i("onCreate", onCreateMessage);
+        Log.i(TAG, "on onCreate event fired");
     }
     @Override
     protected void onStart() {
         super.onStart();
-        Log.i("onStart", onStartMessage);
+        Log.i(TAG, "on onStart event fired");
     }
     @Override
     protected void onRestart(){
         super.onRestart();
-        Log.i("onRestart", onRestartMessage);
+        Log.i(TAG, "on onRestart event fired");
     }
     @Override
     protected void onResume(){
         super.onResume();
-        Log.i("onResume", onResumeMessage);
+        Log.i(TAG, "on onResume event fired");
     }
     @Override
     protected void onPause(){
         super.onPause();
-        Log.i("onPause", onPauseMessage);
+        Log.i(TAG, "on onPause event fired");
     }
     @Override
     protected void onStop(){
         super.onStop();
-        Log.i("onStop", onStopMessage);
+        Log.i(TAG, "on onStop event fired");
     }
     @Override
     protected void onDestroy(){
         super.onDestroy();
-        Log.e("onDestroy", onDestroyMessage);
+        Log.e(TAG, "We’re going down, Captain!");
     }
-
-
 }
